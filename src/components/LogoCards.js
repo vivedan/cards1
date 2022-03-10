@@ -11,7 +11,11 @@ function Tree(props) {
     useEffect(() => {
         window.addEventListener('deviceorientation', function(e) {
             var gammaRotation = e.gamma ? e.gamma * (Math.PI / 180) : 0;
+            var alphaRotation = e.alpha ? e.alpha * (Math.PI / 180) : 0;
+            var betaRotation = e.beta ? e.beta * (Math.PI / 180) : 0;
             ref.current.rotation.y = gammaRotation;
+            ref.current.rotation.z = alphaRotation;
+            ref.current.rotation.x = betaRotation;
         });
     }, [])
 
