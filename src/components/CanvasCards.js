@@ -3,7 +3,7 @@ import * as THREE from 'three';
 //import firebase from '../firebase';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import {OrbitControls, DeviceOrientationControls} from '@react-three/drei';
-import { EffectComposer, Bloom, Noise, Vignette, SSAO as Ssao } from '@react-three/postprocessing';
+//import { EffectComposer, Bloom, Noise, Vignette, SSAO as Ssao } from '@react-three/postprocessing';
 
 import LogoCards from './LogoCards';
 
@@ -116,14 +116,13 @@ function CanvasCards(props) {
 
                 
 
-                {/* <Effect /> */}
+                {/* <Effect /> 
                 <EffectComposer smma>
-                    {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} /> */}
                     <Bloom luminanceThreshold={0} luminanceSmoothing={0.99} intensity={0.5} />
                     <Noise opacity={0.02} />
                     <Vignette eskil={false} offset={0.1} darkness={0.5} />
                     <Ssao />
-                </EffectComposer>
+                </EffectComposer> */}
                 
             </Canvas>
             {/* <InputComment /> */}
