@@ -39,7 +39,7 @@ function CanvasCards(props) {
         )
     } */
 
-    function Swarm({ count, mouse }) {
+    /*function Swarm({ count, mouse }) {
         const mesh = useRef()
         const light = useRef()
         const { size, viewport } = useThree()
@@ -97,7 +97,7 @@ function CanvasCards(props) {
             </instancedMesh>
             </>
         )
-    }
+    }*/
 
     return (
         <div className="cards-cont">
@@ -109,7 +109,7 @@ function CanvasCards(props) {
                 <Suspense fallback={null}>
                         <LogoCards color={props.color}/>
                 </Suspense>
-                <Swarm count={5000} mouse={mouse} />
+                {/*<Swarm count={5000} mouse={mouse} />*/}
                 <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />
                 {/*!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
                 {isMobile && <DeviceOrientationControls />*/}
