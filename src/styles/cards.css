@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Alata";
+}
+.round{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.profilePic{
+    position: absolute;
+    bottom: 100px;
+    right: 2px;
+}
+
+.cards-cont{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.info-cont{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    pointer-events: none;
+    color: rgb(206, 206, 206);
+}
+
+.nameBC{
+    color: white;
+}
+
+.interactive-assets{
+    pointer-events: all;
+}
+
+.info-personal{
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.text-item{
+    margin: 1px;
+    padding: 1px;
+}
+
+.icons-cont{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100vw;
+    bottom: 10px;
+}
+
+.iconBC{
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.iconBC:hover{
+    opacity: 0.8;
+}
+
+.instagramBC{
+    background-image: url('/businessCards/businesscard_instagram_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.linkedinBC{
+    background-image: url('/businessCards/businesscard_linkedin_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.emailBC{
+    background-image: url('/businessCards/businesscard_email_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.webBC{
+    background-image: url('/businessCards/businesscard_web_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whatsappBC{
+    background-image: url('/businessCards/businesscard_whatsapp_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.addBC{
+    background-image: url('/businessCards/businesscard_more_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) and (max-width: 600px) {
+    /* Portrait styles here */
+  
+  .iconBC{
+      opacity: 0.8;
+  }
+  
+}
+
+@media screen and (orientation:portrait) and (max-width: 320px) {
+/* Portrait styles here */
+
+    .iconBC{
+        opacity: 0.8;
+    }
+
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) and (max-height: 700px) {
+/* Landscape styles here */
+
+    .iconBC{
+        opacity: 0.8;
+    }
+
+    .info-personal{
+        top: 60%;
+    }
+
+
+}
+
+@media screen and (orientation:landscape) and (max-height: 320px) {
+/* Landscape styles here */
+
+    .iconBC{
+        opacity: 0.8;
+    }
+
+    .info-personal{
+        top: 60%;
+    }
+
+}
