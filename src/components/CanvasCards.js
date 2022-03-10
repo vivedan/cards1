@@ -1,8 +1,8 @@
-import React, { Suspense, useMemo, useRef } from 'react';
+import React, { Suspense, useMemo, useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 //import firebase from '../firebase';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { PresentationControls} from '@react-three/drei';
+import {OrbitControls, DeviceOrientationControls} from '@react-three/drei';
 import { EffectComposer, Bloom, Noise, Vignette, SSAO as Ssao } from '@react-three/postprocessing';
 
 import LogoCards from './LogoCards';
@@ -11,13 +11,13 @@ function CanvasCards(props) {
 
     //const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const mouse = useRef([0, 0]);
-    /*const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         //console.log(mobile);
         if(mobile) {setIsMobile(true)}
         else{setIsMobile(false)};
-    }, [])*/
+    }, [])
     //const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), []);
 
     //EFFECTS
@@ -107,21 +107,11 @@ function CanvasCards(props) {
                 <color attach="background" args={["#0a0a0a"]} />
                 <fog color="#212121" attach="fog" near={8} far={30} />
                 <Suspense fallback={null}>
-                    <PresentationControls
-                            global
-                            config={{ mass: 2, tension: 1000 }}
-                            snap={{ mass: 4, tension: 1500 }}
-                            rotation={[0, 0, 0]}
-                            polar={[-Math.PI / 3, Math.PI / 3]}
-                            azimuth={[-Math.PI / 1.4, Math.PI / 2]}>
-                        
-                            <LogoCards color={props.color}/>
-                        
-                    </PresentationControls>
+                        <LogoCards color={props.color}/>
                 </Suspense>
                 <Swarm count={5000} mouse={mouse} />
-                {/* !isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
-                {isMobile && <DeviceOrientationControls target={[0, 2, 0]}/> */}
+                {!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
+                {/*isMobile && <DeviceOrientationControls />*/}
 
                 
 
