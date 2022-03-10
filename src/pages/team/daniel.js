@@ -35,12 +35,12 @@ function Daniel() {
                         <p className="text-item">{user.phone}</p>
                     </div>
                     <div className="icons-cont">
-                        <a href={user.instagram} target="_blank" rel="noreferrer"><div className="iconBC instagramBC" placeholder="instagram"></div></a>
-                        <a href={user.linkedin} target="_blank" rel="noreferrer"><div className="iconBC linkedinBC" placeholder="linkedin"></div></a>
-                        <a href={"mailto:" + user.email} target="_blank" rel="noreferrer"><div className="iconBC emailBC" placeholder="email"></div></a>
-                        <a href={user.website} target="_blank" rel="noreferrer"><div className="iconBC webBC" placeholder="web"></div></a>
-                        <a href={user.whatsapp} target="_blank" rel="noreferrer"><div className="iconBC whatsappBC" placeholder="whatsapp"></div></a>
-                        <a href={user.contacts} download={user.contacts} target="_blank" rel="noreferrer"><div className="round addBC" placeholder="add"></div></a>
+                        <a href={user.instagram} target="_blank" rel="noreferrer" aria-label="instagram"><div className="iconBC instagramBC" placeholder="instagram"></div></a>
+                        <a href={user.linkedin} target="_blank" rel="noreferrer" aria-label="linkedin"><div className="iconBC linkedinBC" placeholder="linkedin"></div></a>
+                        <a href={"mailto:" + user.email} target="_blank" rel="noreferrer" aria-label="email"><div className="iconBC emailBC" placeholder="email"></div></a>
+                        <a href={user.website} target="_blank" rel="noreferrer" aria-label="web"><div className="iconBC webBC" placeholder="web"></div></a>
+                        <a href={user.whatsapp} target="_blank" rel="noreferrer" aria-label="whatsapp"><div className="iconBC whatsappBC" placeholder="whatsapp"></div></a>
+                        <a href={user.contacts} download={user.contacts} target="_blank" rel="noreferrer" aria-label="add contact"><div className="round addBC" placeholder="add"></div></a>
                     </div>
                     
                 </div> 

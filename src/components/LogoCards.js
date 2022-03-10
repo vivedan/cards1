@@ -1,21 +1,10 @@
-import React, { useState } from 'react';
-import * as THREE from 'three';
-import { useGLTF, Text } from '@react-three/drei';
-//import logoPath from '../models/rareaLogo.glb';
-
-import { useSpring, animated } from '@react-spring/three';
+import React from 'react';
+import { useGLTF } from '@react-three/drei';
 
 
 function Tree(props) {
-    //'../../public/assets/rarea_ChristmasTree.glb'
 
     const logo = useGLTF('/rareaLogo.glb');
-
-    const [hovered, setHovered] = useState(false);
-
-    const {scale} = useSpring({ scale: hovered ? [2, 2, 2] : [1, 1, 1] });
-  
-    const colors = ['Chartreuse', 'GreenYellow', 'PaleGreen'];
 
     return (
         <group>

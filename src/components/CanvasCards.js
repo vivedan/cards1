@@ -1,9 +1,9 @@
-import React, { Suspense, useMemo, useRef } from 'react';
+import React, { Suspense, useMemo, useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 //import firebase from '../firebase';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import {OrbitControls} from '@react-three/drei';
-import { EffectComposer, Bloom, Noise, Vignette, SSAO } from '@react-three/postprocessing';
+import {OrbitControls, DeviceOrientationControls} from '@react-three/drei';
+import { EffectComposer, Bloom, Noise, Vignette, SSAO as Ssao } from '@react-three/postprocessing';
 
 import LogoCards from './LogoCards';
 
@@ -11,6 +11,13 @@ function CanvasCards(props) {
 
     //const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const mouse = useRef([0, 0]);
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        console.log(mobile);
+        if(mobile) {setIsMobile(true)}
+        else{setIsMobile(false)};
+    }, [])
     //const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), []);
 
     //EFFECTS
@@ -92,20 +99,6 @@ function CanvasCards(props) {
         )
     }
 
-    /* const [comments, setComments] = useState([]);
-
-    useEffect(() => {
-        const projectsRef = firebase.database().ref('tree-comments');
-        projectsRef.on('value', (snapshot) => {
-            let items = snapshot.val();
-            let newState = [];
-            Object.values(items).forEach(item => newState.push(item));
-            setComments(newState);
-        })
-    }, []); */
-
-    /* pixelRatio={Math.min(2, isMobile ? window.devicePixelRatio : 1)} */
-
     return (
         <div className="cards-cont">
             <Canvas
@@ -117,14 +110,15 @@ function CanvasCards(props) {
                     <LogoCards color={props.color}/>
                 </Suspense>
                 <Swarm count={5000} mouse={mouse} />
-                <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 2, 0]} />
+                {!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 2, 0]} />}
+                {isMobile && <DeviceOrientationControls target={[0, 2, 0]}/>}
                 {/* <Effect /> */}
                 <EffectComposer smma>
                     {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} /> */}
                     <Bloom luminanceThreshold={0} luminanceSmoothing={0.99} intensity={0.5} />
                     <Noise opacity={0.02} />
                     <Vignette eskil={false} offset={0.1} darkness={0.5} />
-                    <SSAO />
+                    <Ssao />
                 </EffectComposer>
                 
             </Canvas>
