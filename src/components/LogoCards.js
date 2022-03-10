@@ -8,7 +8,7 @@ function Tree(props) {
 
     const ref = useRef();
 
-    useEffect(() => {
+    /*useEffect(() => {
         window.addEventListener('deviceorientation', function(e) {
             var gammaRotation = e.gamma ? e.gamma * (Math.PI / 180) : 0;
             var alphaRotation = e.alpha ? e.alpha * (Math.PI / 180) : 0;
@@ -17,7 +17,7 @@ function Tree(props) {
             ref.current.rotation.z = alphaRotation;
             ref.current.rotation.x = betaRotation;
         });
-    }, [])
+    }, [])*/
 
     return (
         <group ref={ref}>

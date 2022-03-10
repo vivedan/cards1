@@ -11,13 +11,13 @@ function CanvasCards(props) {
 
     //const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const mouse = useRef([0, 0]);
-    const [isMobile, setIsMobile] = useState(false);
+    /*const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         //console.log(mobile);
         if(mobile) {setIsMobile(true)}
         else{setIsMobile(false)};
-    }, [])
+    }, [])*/
     //const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), []);
 
     //EFFECTS
@@ -110,8 +110,9 @@ function CanvasCards(props) {
                         <LogoCards color={props.color}/>
                 </Suspense>
                 <Swarm count={5000} mouse={mouse} />
-                {!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
-                {/*isMobile && <DeviceOrientationControls />*/}
+                <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />
+                {/*!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
+                {isMobile && <DeviceOrientationControls />*/}
 
                 
 
