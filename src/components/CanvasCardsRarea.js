@@ -104,7 +104,7 @@ function CanvasCards(props) {
             <Canvas
                 camera={{position: [0, 0, 2]}}
                 /*gl={{ powerPreference: "high-performance", alpha: false, antialias: false, stencil: false, depth: false }}*/>
-                <color attach="background" args={["#07224d"]} />
+                <color attach="background" args={["#0a0a0a"]} />
                 <fog color="#212121" attach="fog" near={8} far={30} />
                 <Suspense fallback={null}>
                         <LogoCards color={props.color}/>

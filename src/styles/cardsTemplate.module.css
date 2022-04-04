@@ -10,20 +10,19 @@ body{
     height: calc(100vh - calc(100vh - 100%));
 }
 .round{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     cursor: pointer;
     pointer-events: all;
 }
 
 .profilePic{
-    position: absolute;
-    bottom: 100px;
-    right: 2px;
+    position: relative;
+    bottom: 10px;
 }
 
-.cards-cont{
+.cardsCont{
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -32,7 +31,7 @@ body{
     height: calc(100vh - calc(100vh - 100%));
 }
 
-.info-cont{
+.infoCont{
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -48,11 +47,11 @@ body{
     color: white;
 }
 
-.interactive-assets{
+.interactiveAssets{
     pointer-events: all;
 }
 
-.info-personal{
+.dataCont{
     position: absolute;
     width: 100vw;
     display: flex;
@@ -63,12 +62,26 @@ body{
     transform: translate(-50%,-50%);
 }
 
-.text-item{
-    margin: 1px;
-    padding: 1px;
+.infoPersonal{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
 }
 
-.icons-cont{
+.textItem{
+    margin: 1px;
+    padding: 1px;
+    text-align: center;
+}
+
+.address{
+    font-size: 13px;
+}
+
+.iconsCont{
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -96,8 +109,8 @@ body{
     background-size: cover;
 }
 
-.linkedinBC{
-    background-image: url('/businessCards/businesscard_linkedin_icon.png');
+.mapsBC{
+    background-image: url('/businessCards/businesscard_maps_icon.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -125,6 +138,22 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.contactButton{
+    color: rgb(12, 12, 95);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0px 25px;
+    border-radius: 100px;
+    position: relative;
+    top: 20px;
+    font-weight: bold;
+}
+
+.contactButton:hover{
+    background: white;
+}
+
 
 
 /* Portrait */
@@ -154,8 +183,32 @@ body{
         opacity: 0.8;
     }
 
-    .info-personal{
+    .infoPersonal{
         top: 60%;
+    }
+
+    .iconsCont{
+        flex-direction: column;
+        height: 100vh;
+        bottom: 0;
+        width: 50px;
+        align-items: center;
+        right: 0;
+    }
+
+    .dataCont{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .infoPersonal{
+        align-items: flex-start;
+        width: 60%;
+    }
+
+    .address{
+        width: 70%;
+        text-align: left;
     }
 
 
@@ -168,7 +221,7 @@ body{
         opacity: 0.8;
     }
 
-    .info-personal{
+    .infoPersonal{
         top: 60%;
     }
 

@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei';
 
 function Tree(props) {
 
-    const logo = useGLTF('/kaldevi_logo3D1.glb');
+    const logo = useGLTF('/rareaLogo.glb');
 
     const ref = useRef();
 
@@ -25,9 +25,8 @@ function Tree(props) {
                 castShadow
                 receiveShadow
                 geometry={logo.nodes.Scene.children[0].geometry}
-                position={[0, 0.8, 0]}
-                rotation={[Math.PI/2, 0, 0]}
-                scale={15}
+                position={[0, 0.6, 0]}
+                scale={1}
             >
                 <meshBasicMaterial attach="material" color={props.color}></meshBasicMaterial>
             </mesh>
