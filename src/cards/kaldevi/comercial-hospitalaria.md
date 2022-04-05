@@ -1,19 +1,19 @@
 ---
 
 company: kaldevi
-name: José Antonio
-surname: Gómez
-job: Gerente
+name: Francisco
+surname: Guillot
+job: Comercial Hospitalaria
 address: "C/Sèquia de Quart, 7.\nPol. Ind. La Pasqualeta. 46200 Paiporta (Valencia)"
 website: https://kaldevi.es/
-email: jag@kaldevi.es
-phone: 647 70 09 14
+email: hospitalaria@kaldevi.es
+phone: 687 783 544
 instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://g.page/KALDEVICENTRAL?share
-whatsapp: 647700914
+whatsapp: 687783544
 contacts: ../kaldevi/assets/Daniel Vera Villalobos.vcf
-photo: ../kaldevi/assets/jose_antonio_gomez_gerente.jpg
+photo: ../kaldevi/assets/paco_guillot_comercial.jpg
 color: white
-slug: gerencia
+slug: hospitalaria
 
 ---
