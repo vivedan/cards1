@@ -3,7 +3,7 @@
 company: kaldevi
 name: Paula
 surname: Gómez Mateos
-job: Contabilidad
+job: Comunicaciones
 address: "C/Sèquia de Quart, 7.\nPol. Ind. La Pasqualeta. 46200 Paiporta (Valencia)"
 website: https://kaldevi.es/
 email: comunicaciones@kaldevi.es
