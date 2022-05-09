@@ -107,7 +107,7 @@ function CanvasCards(props) {
                 <color attach="background" args={["#07224d"]} />
                 <fog color="#212121" attach="fog" near={8} far={30} />
                 <Suspense fallback={null}>
-                        <LogoCards color={props.color}/>
+                        <LogoCards color={props.color} logo={props.logo}/>
                 </Suspense>
                 <Swarm count={5000} mouse={mouse} />
                 <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />

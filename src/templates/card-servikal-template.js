@@ -45,7 +45,7 @@ function CardStandardTemplate( {data} ) {
                 </div> 
 
             </div>
-            <CanvasCards color={color}/>
+            <CanvasCards color={color} logo={'/servikal_logo3D.glb'}/>
         </div>
      );
 }
@@ -54,7 +54,7 @@ export default CardStandardTemplate;
 
 
 export const query = graphql`
-  query StandardCardData($slug: String) {
+  query ServikalCardData($slug: String) {
     info: allMarkdownRemark (
       filter: {
         frontmatter: {slug: {eq: $slug}}

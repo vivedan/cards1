@@ -45,7 +45,7 @@ function CardStandardTemplate( {data} ) {
                 </div> 
 
             </div>
-            <CanvasCards color={color}/>
+            <CanvasCards color={color} logo={'/kaldevi_logo3D25anniversary.glb'}/>
         </div>
      );
 }
@@ -54,7 +54,7 @@ export default CardStandardTemplate;
 
 
 export const query = graphql`
-  query StandardCardData($slug: String) {
+  query KaldeviCardData($slug: String) {
     info: allMarkdownRemark (
       filter: {
         frontmatter: {slug: {eq: $slug}}
