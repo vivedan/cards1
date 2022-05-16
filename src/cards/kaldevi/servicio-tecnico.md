@@ -12,7 +12,7 @@ instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://g.page/KALDEVICENTRAL?share
 whatsapp: 666533880
 contacts: ../kaldevi/assets/Carlos García.vcf
-photo: ../kaldevi/assets/carlos_garcia_servicio_tecnico.jpg
+photo: ../kaldevi/assets/kaldevi_logo.png
 color: white
 slug: servicio-tecnico
 

@@ -12,7 +12,7 @@ instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://g.page/KALDEVICENTRAL?share
 whatsapp: 674035404
 contacts: ../kaldevi/assets/Pilar Serradilla.vcf
-photo: ../kaldevi/assets/playas_pilar_serradilla.jpg
+photo: ../kaldevi/assets/Icono Servikal Color.jpg
 color: white
 slug: playas
 
