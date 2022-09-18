@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Alata";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+    height: calc(100vh - calc(100vh - 100%)); */
+}
+.round{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.profilePic{
+    position: relative;
+    bottom: 10px;
+}
+
+.cardsCont{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+    height: calc(100vh - calc(100vh - 100%));
+    background-image: url('/images/RAREA_portrait1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.infoCont{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    pointer-events: none;
+    color: rgb(206, 206, 206);
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+    height: calc(100vh - calc(100vh - 100%));
+}
+
+.nameBC{
+    color: white;
+}
+
+.interactiveAssets{
+    pointer-events: all;
+}
+
+.dataCont{
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.infoPersonal{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+}
+
+.textItem{
+    margin: 1px;
+    padding: 1px;
+    text-align: center;
+}
+
+.address{
+    font-size: 13px;
+}
+
+.iconsCont{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100vw;
+    bottom: 10px;
+}
+
+.iconBC{
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    cursor: pointer;
+    pointer-events: all;
+    filter: invert(100%) brightness(400%);
+}
+
+.iconBC:hover{
+    opacity: 0.8;
+}
+
+.instagramBC{
+    background-image: url('/businessCards/businesscard_instagram_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mapsBC{
+    background-image: url('/businessCards/businesscard_maps_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.emailBC{
+    background-image: url('/businessCards/businesscard_email_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.webBC{
+    background-image: url('/businessCards/businesscard_web_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whatsappBC{
+    background-image: url('/businessCards/businesscard_whatsapp_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.addBC{
+    background-image: url('/businessCards/businesscard_more_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactButton{
+    color: rgb(12, 12, 95);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0px 25px;
+    border-radius: 100px;
+    position: relative;
+    top: 20px;
+    font-weight: bold;
+}
+
+.contactButton:hover{
+    background: white;
+}
+
+
+
+/* Portrait */
+@media screen and (orientation:portrait) and (max-width: 600px) {
+    /* Portrait styles here */
+  
+  .iconBC{
+      opacity: 0.8;
+  }
+  
+}
+
+@media screen and (orientation:portrait) and (max-width: 320px) {
+/* Portrait styles here */
+
+    .iconBC{
+        opacity: 0.8;
+    }
+
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) and (max-height: 700px) {
+/* Landscape styles here */
+
+    .iconBC{
+        opacity: 0.8;
+    }
+
+    .infoPersonal{
+        top: 60%;
+    }
+
+    .iconsCont{
+        flex-direction: column;
+        height: 100vh;
+        bottom: 0;
+        width: 50px;
+        align-items: center;
+        right: 0;
+    }
+
+    .dataCont{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .infoPersonal{
+        align-items: flex-start;
+        width: 60%;
+    }
+
+    .address{
+        width: 70%;
+        text-align: left;
+    }
+
+
+}
+
+@media screen and (orientation:landscape) and (max-height: 320px) {
+/* Landscape styles here */
+
+    .iconBC{
+        opacity: 0.8;
+    }
+
+    .infoPersonal{
+        top: 60%;
+    }
+
+}

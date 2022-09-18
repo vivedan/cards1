@@ -5,20 +5,19 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import {OrbitControls, DeviceOrientationControls} from '@react-three/drei';
 //import { EffectComposer, Bloom, Noise, Vignette, SSAO as Ssao } from '@react-three/postprocessing';
 
-import LogoCards from './LogoCardsRarea';
-import * as cardStyles from '../styles/cardsRareaTemplate.module.css';
+import LogoCards from './LogoCards';
 
 function CanvasCards(props) {
 
     //const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const mouse = useRef([0, 0]);
-    /* const [isMobile, setIsMobile] = useState(false);
+    /*const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         //console.log(mobile);
         if(mobile) {setIsMobile(true)}
         else{setIsMobile(false)};
-    }, []) */
+    }, [])*/
     //const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), []);
 
     //EFFECTS
@@ -101,19 +100,19 @@ function CanvasCards(props) {
     }
 
     return (
-        <div className={cardStyles.cardsCont}>
+        <div className="cards-cont">
             <Canvas
                 camera={{position: [0, 0, 2]}}
                 /*gl={{ powerPreference: "high-performance", alpha: false, antialias: false, stencil: false, depth: false }}*/>
-                {/* <color attach="background" args={["#07224d"]} /> */}
+                <color attach="background" args={["#0a0a0a"]} />
                 <fog color="#212121" attach="fog" near={8} far={30} />
                 <Suspense fallback={null}>
-                        <LogoCards color={props.color} logo={props.logo}/>
+                        <LogoCards color={props.color}/>
                 </Suspense>
                 <Swarm count={5000} mouse={mouse} />
                 <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />
-                {/* {!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />} */}
-                {/* {isMobile && <DeviceOrientationControls />} */}
+                {/*!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
+                {isMobile && <DeviceOrientationControls />*/}
 
                 
 
