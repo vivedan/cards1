@@ -1,17 +1,17 @@
 ---
 
 company: kaldevi
-name: Ursula
+name: Úrsula
 surname: Lacueva
-job: Comercial Ortopeda
-address: "C/ Almácera, 5 bj. 46017 Valencia"
+job: Comercial Geriatría
+address: "C/Sèquia de Quart, 7.\nPol. Ind. La Pasqualeta. 46200 Paiporta (Valencia)"
 website: https://kaldevi.es/
-email: info@kaldevi.es
-phone: ['673 83 33 58']
+email: geriatria@kaldevi.es
+phone: ['960 88 94 88', '674 035 405']
 instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://goo.gl/maps/wJEeMtgS2EWuvPj37
-whatsapp: 673833358
-contacts: ../kaldevi/assets/Ursula Lacueva.vcf
+whatsapp: 674035405
+contacts: ../kaldevi/assets/Úrsula Lacueva.vcf
 photo: ../kaldevi/assets/ursula_lacueva_ortopedia_comercial.jpg
 color: white
 slug: ortopedia-d

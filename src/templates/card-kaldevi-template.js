@@ -15,7 +15,7 @@ function CardStandardTemplate( {data} ) {
 
     const mapLink = "https://www.google.es/maps/place/Kaldevi+Ingenier%C3%ADa+Geri%C3%A1trica+S.L./@39.4309776,-0.4038842,19.86z/data=!4m5!3m4!1s0xd604eee2c312083:0xfadef9b8df85715b!8m2!3d39.4310722!4d-0.4036115"
 
-    console.log(whatsapp);
+    //console.log(phone);
 
     return ( 
         <div>
