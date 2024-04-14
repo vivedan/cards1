@@ -48,7 +48,7 @@ body{
 }
 
 .interactiveAssets{
-    pointer-events: all;
+    pointer-events: none;
     height: 100vh;
 }
 
@@ -58,9 +58,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
+    pointer-events: all;
 }
 
 .infoPersonal{
