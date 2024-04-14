@@ -116,6 +116,12 @@ body{
     background-size: cover;
 }
 
+.linkedinBC{
+    background-image: url('/businessCards/businesscard_linkedin_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .mapsBC{
     background-image: url('/businessCards/businesscard_maps_icon.png');
     background-repeat: no-repeat;

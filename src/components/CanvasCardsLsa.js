@@ -2,7 +2,7 @@ import React, { Suspense, useMemo, useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 //import firebase from '../firebase';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import {OrbitControls, DeviceOrientationControls} from '@react-three/drei';
+import {OrbitControls, DeviceOrientationControl, GradientTexture} from '@react-three/drei';
 //import { EffectComposer, Bloom, Noise, Vignette, SSAO as Ssao } from '@react-three/postprocessing';
 
 import LogoCards from './LogoCards';
@@ -93,7 +93,7 @@ function CanvasCards(props) {
             <pointLight ref={light} distance={10} intensity={2} color="lightblue" />
             <instancedMesh ref={mesh} args={[null, null, count]}>
                 <dodecahedronBufferGeometry attach="geometry" args={[0.1, 0]} />
-                <meshBasicMaterial attach="material" color="#525252" />
+                <meshBasicMaterial attach="material" color="#b7d689" />
             </instancedMesh>
             </>
         )
@@ -104,12 +104,21 @@ function CanvasCards(props) {
             <Canvas
                 camera={{position: [0, 0, 2]}}
                 /*gl={{ powerPreference: "high-performance", alpha: false, antialias: false, stencil: false, depth: false }}*/>
-                <color attach="background" args={["#07224d"]} />
-                <fog color="#212121" attach="fog" near={8} far={30} />
+                <GradientTexture
+                    attach="background"
+                    stops={[0, 1]} // As many stops as you want
+                    colors={['#2c3c5c', '#6d698a']} // Colors need to match the number of stops
+                    size={1024} // Size is optional, default = 1024
+                />
+                <fog color="#ba9eff" attach="fog" near={8} far={30} /> {/*#212121*/}
                 <Suspense fallback={null}>
-                        <LogoCards color={props.color} logo={props.logo} posZ={0.5}/>
+                        <LogoCards color={props.color} logo={props.logo} posZ={0.3} material={'standard'}/>
                 </Suspense>
                 <Swarm count={5000} mouse={mouse} />
+                <ambientLight intensity={0.25} />
+                <pointLight position={[-0.5, 0.5, -0.5]} color="#6275e3" intensity={10} />
+                <pointLight position={[0.7, 1.5, 0.5]} color="#83ccde" intensity={2} />
+                <pointLight position={[-0.7, 0, 0.2]} color="#de9d1b" intensity={2.5} />
                 <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />
                 {/*!isMobile && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} target={[0, 0, 0]} />}
                 {isMobile && <DeviceOrientationControls />*/}

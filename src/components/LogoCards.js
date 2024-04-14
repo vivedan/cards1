@@ -29,11 +29,12 @@ function Tree(props) {
                 castShadow
                 receiveShadow
                 geometry={logo.nodes.Scene.children[0].geometry}
-                position={[0, 0.5, 0]}
+                position={[0, props.posZ, 0]}
                 rotation={[Math.PI/2, 0, 0]}
                 scale={6}
             >
-                <meshBasicMaterial attach="material" color={props.color}></meshBasicMaterial>
+                {props.material === "standard" ? <meshStandardMaterial attach="material" color={props.color} roughness={0.3} fog={false}></meshStandardMaterial>
+                : <meshBasicMaterial attach="material" color={props.color}></meshBasicMaterial> }
             </mesh>
             {logo.nodes.Scene.children[1] && <mesh
                 castShadow
