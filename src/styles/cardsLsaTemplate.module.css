@@ -49,6 +49,7 @@ body{
 
 .interactiveAssets{
     pointer-events: all;
+    height: 100vh;
 }
 
 .dataCont{
@@ -82,7 +83,7 @@ body{
 }
 
 .iconsCont{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
