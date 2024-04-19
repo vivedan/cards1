@@ -29,7 +29,7 @@ function CardStandardTemplate( {data} ) {
                             <h3 className={cardStyles.textItem}>{job}</h3>
                             <p className={cardStyles.textItem}>{email}</p>
                             {phone.map(number =>(<p className={cardStyles.textItem} key={number}>{number}</p>))}
-                            <p className={`${cardStyles.textItem} ${cardStyles.address}`}>{address}</p>
+                            {/*<p className={`${cardStyles.textItem} ${cardStyles.address}`}>{address}</p>*/}
                             <a href={contacts.publicURL} download={contacts.publicURL} target="_blank" rel="noreferrer" aria-label="add contact" className={cardStyles.contactButton}><p>Añádeme a contactos</p></a>
                         </div>
                     </div>
