@@ -1,18 +1,18 @@
 ---
 
 company: kaldevi
-name: Mª Ángeles
-surname: García
+name: Rocío
+surname: Ruiz
 job: Comercial Ortopedia
-address: "Plaza de la Concordia, 11. 46100 Burjassot (Valencia)"
+address: "C/Almacera, 5.  46017 Valencia"
 website: https://kaldevi.es/
 email: ortopeda@kaldevi.es
-phone: ['96 390 47 48', '673 833 358']
+phone: ['96 377 58 93', '663 913 348']
 instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://goo.gl/maps/y9ZahjQWHjtYcUH88
-whatsapp: 673833358
-contacts: ../kaldevi/assets/Mª Ángeles García.vcf
-photo: ../kaldevi/assets/maria_angeles_tecnico_ortopeda.jpg
+whatsapp: 663913348
+contacts: ../kaldevi/assets/Rocío Ruiz.vcf
+photo: ../kaldevi/assets/kaldevi_logo.png
 color: white
 slug: ortopedia-b
 

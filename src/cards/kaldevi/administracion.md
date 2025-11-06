@@ -10,7 +10,7 @@ email: admin@kaldevi.es
 phone: ['960 88 94 88']
 instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://g.page/KALDEVICENTRAL?share
-whatsapp: null
+whatsapp: 672623511
 contacts: ../kaldevi/assets/Inmaculada Rodríguez.vcf
 photo: ../kaldevi/assets/inmaculada_rodriguez_administracion_kaldevi.jpg
 color: white

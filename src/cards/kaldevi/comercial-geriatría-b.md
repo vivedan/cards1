@@ -1,19 +1,19 @@
 ---
 
 company: kaldevi
-name: Javier
-surname: Pérez
-job: Compras
+name: Nacho
+surname: Egido
+job: Comercial Geriatría
 address: "C/Sèquia de Quart, 7.\nPol. Ind. La Pasqualeta. 46200 Paiporta (Valencia)"
 website: https://kaldevi.es/
-email: compras@kaldevi.es
-phone: ['627 51 02 57']
+email: comercial@kaldevi.es
+phone: ['960 88 94 88', '663 913 348']
 instagram: https://www.instagram.com/kaldevi.ortopedia/
-maps: https://g.page/KALDEVICENTRAL?share
-whatsapp: 627510257
-contacts: ../kaldevi/assets/Javier Pérez.vcf
+maps: https://goo.gl/maps/wJEeMtgS2EWuvPj37
+whatsapp: 663913348
+contacts: ../kaldevi/assets/Nacho Egido.vcf
 photo: ../kaldevi/assets/kaldevi_logo.png
 color: white
-slug: compras
+slug: geriatria-b
 
 ---

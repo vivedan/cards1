@@ -10,7 +10,7 @@ email: contabilidad@kaldevi.es
 phone: ['677 51 77 80']
 instagram: https://www.instagram.com/kaldevi.ortopedia/
 maps: https://g.page/KALDEVICENTRAL?share
-whatsapp: null
+whatsapp: 622575077
 contacts: ../kaldevi/assets/Paula Gómez.vcf
 photo: ../kaldevi/assets/paula_gomez_contabilidad_kaldevi.jpg
 color: white
